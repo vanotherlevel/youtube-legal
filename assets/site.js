@@ -1,0 +1,5 @@
+
+document.querySelectorAll('.yt').forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.id,s=b.dataset.start||0;b.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&start='+s+'" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="YouTube video"></iframe>';});});
+document.querySelectorAll('ul.check').forEach(function(ul){var k='chk:'+location.pathname+':'+ul.id,st={};try{st=JSON.parse(localStorage.getItem(k)||'{}')}catch(e){}
+ var p=document.getElementById(ul.id+'-p');function upd(){var b=ul.querySelectorAll('input'),n=0;b.forEach(function(x){if(x.checked)n++});if(p)p.textContent=n+' / '+b.length+' found';}
+ ul.querySelectorAll('input').forEach(function(x){if(st[x.value]){x.checked=true;x.closest('li').classList.add('done')}x.addEventListener('change',function(){st[x.value]=x.checked;x.closest('li').classList.toggle('done',x.checked);try{localStorage.setItem(k,JSON.stringify(st))}catch(e){}upd();});});upd();});
