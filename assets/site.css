@@ -67,6 +67,11 @@ nav.main a:hover{background:var(--bg2);text-decoration:none}nav.main a.on{backgr
 .card:hover .th .pl{opacity:1;transform:none}.card .th .pl:after{content:"";margin-left:3px;border-style:solid;border-width:7px 0 7px 12px;border-color:transparent transparent transparent #fff}
 .card .bd{padding:14px 16px 18px}.card .g{display:inline-block;color:var(--red);background:var(--redsoft);font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;padding:3px 9px;border-radius:999px}
 .card h3{margin:9px 0 6px;font-size:17.5px;line-height:1.3;font-weight:700}.card p{margin:0;color:var(--dim);font-size:14px;line-height:1.5}
+.card .th video.pv,.ahero video.pv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .35s;pointer-events:none}
+.card .th video.pv.on,.ahero video.pv.on{opacity:1}
+.card .th .pvb{position:absolute;left:10px;bottom:10px;display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.62);color:#fff;font:700 11px/1 Inter,sans-serif;letter-spacing:.4px;padding:6px 9px 6px 8px;border-radius:999px;transition:opacity .3s;backdrop-filter:blur(4px)}
+.card .th .pvb:before{content:"";border-style:solid;border-width:5px 0 5px 8px;border-color:transparent transparent transparent #fff}
+.card .th.playing .pvb{opacity:0}
 .card.v .bd{padding:11px 14px 14px}.card.v h3{font:600 14.5px/1.4 Inter;margin:0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
 
